@@ -75,7 +75,9 @@ module DateRangeFormatter
     end
 
     def same_months_data
-      {
+      { 
+        from_hour: formatted_hour(from_date),
+        until_hour: formatted_hour(until_date),
         from_day: from_date.day,
         until_day: until_date.day,
         month: formatted_month(from_date),
@@ -85,6 +87,8 @@ module DateRangeFormatter
 
     def same_years_data
       {
+        from_hour: formatted_hour(from_date),
+        until_hour: formatted_hour(until_date),
         from_day: from_date.day,
         until_day: until_date.day,
         from_month: formatted_month(from_date),
